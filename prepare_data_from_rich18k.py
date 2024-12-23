@@ -2,7 +2,7 @@ import json
 from tqdm import tqdm 
 import cv2
 
-with open('/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k-gpt/dev/richhf_18k_dev_gpt_generate.json', 'r') as file:
+with open('/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k-gpt/train/richhf_18k_train_gpt_generate.json', 'r') as file:
     datas = json.load(file)
 
 
@@ -88,5 +88,5 @@ for data in tqdm(datas):
 
         
         
-with open('/mnt/petrelfs/wensiwei/LEGION/groundingLMM/data/GranDf/annotations/train/rich18k_GCG_val.json', 'w') as file:
+with open('/mnt/petrelfs/wensiwei/LEGION/groundingLMM/data/GranDf/annotations/train/rich18k_GCG_train.json', 'w') as file:
     json.dump(result, file, indent=4)

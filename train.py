@@ -29,8 +29,8 @@ from tools.utils import (DEFAULT_IM_END_TOKEN, DEFAULT_IM_START_TOKEN, AverageMe
 from dataset.segm_datasets.RefCOCO_Segm_ds import ReferSegmDataset
 from dataset.region_datasets.RefCOCO_VG_Region_ds import RefCocoGRegDataset, VisualGenomeRegDataset
 from dataset.caption_datasets.COCO_Caption_ds import CocoCapDataset
-from dataset.gcg_datasets.GranDf_gcg_ds import OpenPsgGCGDataset, Flickr30kGCGDataset, RefCOCOgGCGDataset
-
+from dataset.gcg_datasets.GranDf_gcg_ds import OpenPsgGCGDataset, Flickr30kGCGDataset, RefCOCOgGCGDataset, Richhf18kGCGDataset
+import wandb
 
 def parse_args(args):
     parser = argparse.ArgumentParser(description="GLaMM Model Training")
@@ -44,7 +44,7 @@ def parse_args(args):
     parser.add_argument("--freeze_mm_mlp_adapter", action="store_true")
     parser.add_argument("--mm_use_im_start_end", action="store_true", default=True)
     parser.add_argument("--out_dim", default=256, type=int)
-    parser.add_argument("--image_size", default=1024, type=int, help="Image size for grounding image encoder")
+    parser.add_argument("--image_size", default=512, type=int, help="Image size for grounding image encoder")
     parser.add_argument("--model_max_length", default=1536, type=int)
     parser.add_argument("--lora_target_modules", default="q_proj,v_proj", type=str)
     parser.add_argument("--with_region", action="store_true", default=True)
@@ -83,7 +83,7 @@ def parse_args(args):
     parser.add_argument("--epochs", default=10, type=int)
     parser.add_argument("--steps_per_epoch", default=500, type=int)
     parser.add_argument("--batch_size", default=2, type=int, help="batch size per device per step")
-    parser.add_argument("--grad_accumulation_steps", default=10, type=int)
+    parser.add_argument("--grad_accumulation_steps", default=1, type=int)
     parser.add_argument("--val_batch_size", default=1, type=int)
     parser.add_argument("--workers", default=2, type=int)
     parser.add_argument("--lora_r", default=8, type=int)
@@ -112,7 +112,7 @@ def parse_args(args):
     # Experiment settings
     parser.add_argument("--log_base_dir", default="./output", type=str)
     parser.add_argument("--exp_name", default="GlamFinetuneOS", type=str)
-
+    parser.add_argument("--wandb_log", default=True, type=bool)
     return parser.parse_args(args)
 
 
@@ -288,7 +288,7 @@ def initialize_datasets_and_loaders(args, tokenizer):
     # Common dataset arguments
     common_ds_args = {"dataset_dir": args.dataset_dir, "tokenizer": tokenizer,
                       "global_image_encoder": args.vision_tower,
-                      "epoch_samples": args.batch_size * args.grad_accumulation_steps * args.steps_per_epoch * world_size,
+                      "epoch_samples": 10927,
                       "precision": args.precision, "image_size": args.image_size,
                       "num_classes_per_sample": args.num_classes_per_sample}
 
@@ -314,6 +314,7 @@ def initialize_datasets_and_loaders(args, tokenizer):
                                'PsgGCGVal': OpenPsgGCGDataset,
                                'RefCocoGCGVal': RefCOCOgGCGDataset,
                                'FlickrGCGVal': Flickr30kGCGDataset,
+                               'Rich18k': Richhf18kGCGDataset,
                                }
         for val_dataset_name in args.val_dataset.split('|'):
             val_dataset_class = val_dataset_classes.get(val_dataset_name)
@@ -409,9 +410,9 @@ def resume_training_from_checkpoint(model_engine, args):
 
     if args.resume:
         load_path, client_state = model_engine.load_checkpoint(args.resume)
-        with open(os.path.join(args.resume, "latest"), "r") as f:
-            ckpt_dir = f.readlines()[0].strip()
-        args.start_epoch = int(ckpt_dir.replace("global_step", "")) // args.steps_per_epoch
+        # with open(os.path.join(args.resume, "latest"), "r") as f:
+        #     ckpt_dir = f.readlines()[0].strip()
+        # args.start_epoch = int(ckpt_dir.replace("global_step", "")) // args.steps_per_epoch
         print(f"Resume training from {args.resume}, start from epoch {args.start_epoch}")
 
 
@@ -450,6 +451,16 @@ def main(args):
                      'seg': iter(seg_train_loader) if args.use_segm_data else None, }
 
     writer = initialize_environment(args)
+
+    if args.wandb_log and args.local_rank == 0:
+        wandb.init(
+            project='LEGION',
+            config=args.__dict__,
+            save_code=True,
+            reinit=True
+        )
+        # wandb.tensorboard.patch(root_logdir=args.log_base_dir)
+
 
     if args.eval_only:
         cur_val_loss = validate_model_performance(val_loader, model_engine, 0, writer, args)[0]
@@ -521,8 +532,13 @@ def train(active_datasets, model, epoch, scheduler, writer, dataset_iters, args,
                 progress.display(global_step + 1)
                 for key, tracker in trackers.items():
                     writer.add_scalar(f"train/{key}", tracker.avg, global_step)
+                    wandb.log({f"train/{key}": tracker.avg}, step=global_step)
                 writer.add_scalar("metrics/total_secs_per_batch", batch_time.avg, global_step)
                 writer.add_scalar("metrics/data_secs_per_batch", data_time.avg, global_step)
+                wandb.log({
+                    "metrics/total_secs_per_batch": batch_time.avg,
+                    "metrics/data_secs_per_batch": data_time.avg
+                }, step=global_step) 
 
             for tracker in trackers.values():
                 tracker.reset()

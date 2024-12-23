@@ -1,0 +1,1762 @@
+[
+    {
+        "0": {
+            "refs": [
+                {
+                    "sentence": "Man's face in the upper-left quadrant of the image.",
+                    "segmentation": [
+                        [
+                            220.0,
+                            70.0,
+                            220.0,
+                            149.0,
+                            332.0,
+                            149.0,
+                            332.0,
+                            70.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features a person dressed in a white suit against a red background. There are noticeable inconsistencies in the facial area, where the features appear slightly distorted, deviating from natural proportions. This distortion affects the overall symmetry and expression, creating an unusual appearance that contrasts with the otherwise formal attire and setting.\nTo elaborate, I have found the following artifacts. Man's face in the upper-left quadrant of the image.:The man's facial features appear unusually smooth and lack natural skin texture, which is inconsistent with typical human skin appearance.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/9112f85e-4d85-47f7-9f34-54a6945c6d76.png"
+        }
+    },
+    {
+        "1": {
+            "refs": [
+                {
+                    "sentence": "Woman's eye on the left side of the image.",
+                    "segmentation": [
+                        [
+                            229.0,
+                            112.0,
+                            229.0,
+                            160.0,
+                            277.0,
+                            160.0,
+                            277.0,
+                            112.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Part of a person's arm on the lower left side of the image.",
+                    "segmentation": [
+                        [
+                            34.0,
+                            445.0,
+                            34.0,
+                            493.0,
+                            82.0,
+                            493.0,
+                            82.0,
+                            445.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Woman's face on the left side of the image, focusing on the nose and lips.",
+                    "segmentation": [
+                        [
+                            193.0,
+                            161.0,
+                            193.0,
+                            235.0,
+                            269.0,
+                            235.0,
+                            269.0,
+                            161.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features a person lying in bed with a dog. Several anomalies are noticeable, particularly around the facial features of the person, where there are inconsistencies in the symmetry and texture, deviating from natural human appearance. Additionally, the hand visible in the lower part of the image appears to have irregularities in shape and proportion, which are not typical of a human hand. These inconsistencies suggest a deviation from the expected smooth and natural contours of the human form.\nTo elaborate, I have found the following artifacts. Woman's eye on the left side of the image.:The eye appears unusually large and overly detailed, which is inconsistent with typical human eye proportions and texture.Part of a person's arm on the lower left side of the image.:The arm appears unusually distorted and lacks a natural anatomical structure, with an abnormal bulging shape that is inconsistent with typical human arm appearance.Woman's face on the left side of the image, focusing on the nose and lips.:The lips appear unusually smooth and lack natural texture, which is inconsistent with typical human skin features.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/721a1767-8516-45f0-9f48-6478a02a64c7.png"
+        }
+    },
+    {
+        "2": {
+            "refs": [
+                {
+                    "sentence": "Woman's right eye near the center of the image.",
+                    "segmentation": [
+                        [
+                            259.0,
+                            209.0,
+                            259.0,
+                            257.0,
+                            307.0,
+                            257.0,
+                            307.0,
+                            209.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Hand near the bottom center of the woman's face.",
+                    "segmentation": [
+                        [
+                            169.0,
+                            307.0,
+                            169.0,
+                            368.0,
+                            232.0,
+                            368.0,
+                            232.0,
+                            307.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Left shoulder of the woman with red hair.",
+                    "segmentation": [
+                        [
+                            55.0,
+                            397.0,
+                            55.0,
+                            445.0,
+                            103.0,
+                            445.0,
+                            103.0,
+                            397.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features a person with vibrant, curly hair and a striking pose. Several anomalies are present, particularly affecting the facial features and hand. The eyes appear to have unusual shapes, deviating from typical proportions and symmetry. The hand shows inconsistencies in form, with fingers appearing irregular. Additionally, the arm exhibits unexpected contours that disrupt the natural flow of the limb. These irregularities contrast with the otherwise smooth and balanced appearance expected in such a portrait.\nTo elaborate, I have found the following artifacts. Woman's right eye near the center of the image.:The eye appears overly saturated with unnatural color intensity, particularly in the iris and surrounding skin, which is inconsistent with typical human eye appearance.Hand near the bottom center of the woman's face.:The hand appears unusually bright and lacks natural skin texture, suggesting an unrealistic lighting effect or overexposure.Left shoulder of the woman with red hair.:The skin texture appears overly smooth and lacks natural imperfections, giving it an unrealistic appearance.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/3ec857d4-8d51-4dfd-98e0-6dae7507043b.png"
+        }
+    },
+    {
+        "3": {
+            "refs": [
+                {
+                    "sentence": "Woman's right eye in the center of the image.",
+                    "segmentation": [
+                        [
+                            214.0,
+                            188.0,
+                            214.0,
+                            236.0,
+                            262.0,
+                            236.0,
+                            262.0,
+                            188.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Woman's nose and lips in the center of the image.",
+                    "segmentation": [
+                        [
+                            187.0,
+                            244.0,
+                            187.0,
+                            319.0,
+                            235.0,
+                            319.0,
+                            235.0,
+                            244.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Part of the woman's gloved hand holding the rifle near the bottom center of the image.",
+                    "segmentation": [
+                        [
+                            218.0,
+                            469.0,
+                            218.0,
+                            517.0,
+                            266.0,
+                            517.0,
+                            266.0,
+                            469.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features a person in a winter setting, holding a camera with a large lens. Several anomalies are present, primarily affecting the facial features and the camera equipment. The eyes appear to have unusual shapes, deviating from natural symmetry, which may suggest an inconsistency in the depiction of facial expressions. The nose also shows irregularities, lacking the smooth contours typically expected. Additionally, the camera's body exhibits some distortions, particularly around the lens area, which disrupts the expected precision and alignment of photographic equipment. These anomalies collectively impact the overall realism and coherence of the scene.\nTo elaborate, I have found the following artifacts. Woman's right eye in the center of the image.:The eye appears unusually large and overly detailed, which is inconsistent with typical human eye proportions and texture.Woman's nose and lips in the center of the image.:The nose and lips appear unusually smooth and lack natural skin texture, which is inconsistent with typical human facial features.Part of the woman's gloved hand holding the rifle near the bottom center of the image.:The glove appears unusually smooth and lacks the typical texture and detail expected from fabric or leather gloves, making it look artificial.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/fbe4b5f7-cf6c-4124-80f4-c7ea7f9ee186.png"
+        }
+    },
+    {
+        "4": {
+            "refs": [
+                {
+                    "sentence": "Ground near the bottom-left corner of the image.",
+                    "segmentation": [
+                        [
+                            77.0,
+                            352.0,
+                            77.0,
+                            400.0,
+                            125.0,
+                            400.0,
+                            125.0,
+                            352.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Front paw of the larger white animal on the right side of the image.",
+                    "segmentation": [
+                        [
+                            295.0,
+                            346.0,
+                            295.0,
+                            394.0,
+                            385.0,
+                            394.0,
+                            385.0,
+                            346.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Fox's face near the center of the image.",
+                    "segmentation": [
+                        [
+                            286.0,
+                            227.0,
+                            286.0,
+                            329.0,
+                            343.0,
+                            329.0,
+                            343.0,
+                            227.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Tail of the fox on the right side of the image.",
+                    "segmentation": [
+                        [
+                            386.0,
+                            253.0,
+                            386.0,
+                            343.0,
+                            445.0,
+                            343.0,
+                            445.0,
+                            253.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features two arctic foxes in a natural setting. There are several inconsistencies present, primarily affecting the larger fox. The facial area of the fox displays an unusual texture and shape, deviating from the expected smooth and symmetrical appearance. Additionally, the legs of both foxes show irregularities, with distorted shapes that disrupt the natural contours typically seen in these animals. These anomalies create an overall impression of inconsistency with the expected natural form and texture of arctic foxes.\nTo elaborate, I have found the following artifacts. Ground near the bottom-left corner of the image.:The ground texture appears unusually smooth and lacks the natural variation typically found in soil or gravel.Front paw of the larger white animal on the right side of the image.:The paw appears to be unusually large and disproportionate compared to the typical size of a fox's paw, suggesting an anomaly in its representation.Fox's face near the center of the image.:The fox's face is unusually merged with a lantern, which is not a natural occurrence. The integration of the animal's face with an inanimate object is inconsistent with reality.Tail of the fox on the right side of the image.:The tail appears unusually elongated and lacks the typical bushy appearance of a fox tail, which is inconsistent with its natural structure.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/95e1ca81-045a-4050-9c6b-b0b86990949d.png"
+        }
+    },
+    {
+        "5": {
+            "refs": [
+                {
+                    "sentence": "Hand near the woman's face with red nail polish.",
+                    "segmentation": [
+                        [
+                            193.0,
+                            214.0,
+                            193.0,
+                            262.0,
+                            241.0,
+                            262.0,
+                            241.0,
+                            214.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Sleeve of the white sweater on the woman's left arm.",
+                    "segmentation": [
+                        [
+                            250.0,
+                            332.0,
+                            250.0,
+                            380.0,
+                            298.0,
+                            380.0,
+                            298.0,
+                            332.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Right eye of the woman in the center of the image.",
+                    "segmentation": [
+                        [
+                            275.0,
+                            131.0,
+                            275.0,
+                            181.0,
+                            334.0,
+                            181.0,
+                            334.0,
+                            131.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Woman's hand near her chin in the center of the image.",
+                    "segmentation": [
+                        [
+                            209.0,
+                            256.0,
+                            209.0,
+                            307.0,
+                            274.0,
+                            307.0,
+                            274.0,
+                            256.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Woman's left eye in the center of the image.",
+                    "segmentation": [
+                        [
+                            218.0,
+                            133.0,
+                            218.0,
+                            181.0,
+                            266.0,
+                            181.0,
+                            266.0,
+                            133.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Woman's hand near her chin in a white sweater.",
+                    "segmentation": [
+                        [
+                            278.0,
+                            250.0,
+                            278.0,
+                            298.0,
+                            326.0,
+                            298.0,
+                            326.0,
+                            250.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features a person seated on a couch, with several anomalies present. The facial area, particularly around the eyes, shows irregularities that disrupt the natural symmetry and expression. The hands, positioned near the face, also exhibit unusual textures and shapes, deviating from the expected smoothness and form. Additionally, the sweater's fabric appears inconsistent, with distortions affecting its typical knit pattern. These anomalies collectively impact the overall harmony and realism of the scene.\nTo elaborate, I have found the following artifacts. Hand near the woman's face with red nail polish.:The fingers appear unusually smooth and lack natural skin texture, which is inconsistent with typical human skin appearance.Sleeve of the white sweater on the woman's left arm.:The texture of the sweater appears unusually smooth and lacks the typical fabric detail, suggesting an inconsistency with real-world textile appearance.Right eye of the woman in the center of the image.:The eye appears to have an unnatural blue color that is inconsistent with typical human eye colors, suggesting an alteration or anomaly.Woman's hand near her chin in the center of the image.:The fingers appear unusually smooth and lack natural joint definition, giving them an unrealistic appearance.Woman's left eye in the center of the image.:The eye has an unusual blue color with a reflective surface, resembling a glass or artificial eye rather than a natural human eye.Woman's hand near her chin in a white sweater.:The hand appears unusually smooth and lacks natural skin texture, making it look artificial.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/6dc47d1e-b94f-44dd-9e9a-9eb5fb832aff.png"
+        }
+    },
+    {
+        "6": {
+            "refs": [
+                {
+                    "sentence": "Base of the black fan on the left side of the image.",
+                    "segmentation": [
+                        [
+                            40.0,
+                            388.0,
+                            40.0,
+                            436.0,
+                            88.0,
+                            436.0,
+                            88.0,
+                            388.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Dog's front paw on the wooden floor near the center of the image.",
+                    "segmentation": [
+                        [
+                            106.0,
+                            358.0,
+                            106.0,
+                            472.0,
+                            271.0,
+                            472.0,
+                            271.0,
+                            358.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Dog's face near the center of the image.",
+                    "segmentation": [
+                        [
+                            256.0,
+                            127.0,
+                            256.0,
+                            175.0,
+                            304.0,
+                            175.0,
+                            304.0,
+                            127.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Dog's paw on the floor in front of the television.",
+                    "segmentation": [
+                        [
+                            286.0,
+                            419.0,
+                            286.0,
+                            467.0,
+                            334.0,
+                            467.0,
+                            334.0,
+                            419.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Dog's face in the center of the image.",
+                    "segmentation": [
+                        [
+                            238.0,
+                            184.0,
+                            238.0,
+                            232.0,
+                            286.0,
+                            232.0,
+                            286.0,
+                            184.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Speaker grille on the bottom right of the television.",
+                    "segmentation": [
+                        [
+                            412.0,
+                            350.0,
+                            412.0,
+                            409.0,
+                            466.0,
+                            409.0,
+                            466.0,
+                            350.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features a dog sitting in front of a vintage television set. Several anomalies are evident throughout the scene. The dog's facial features appear distorted, with irregular shapes that deviate from natural canine anatomy. The paws also exhibit unusual textures and forms, inconsistent with typical expectations. Additionally, the television screen displays an image that seems out of place, with elements that do not align with the usual content expected on such a device. These inconsistencies contribute to an overall sense of distortion and irregularity in the image.\nTo elaborate, I have found the following artifacts. Base of the black fan on the left side of the image.:The base of the fan appears to be merging with the floor in an unnatural way, lacking clear separation or shadow, which is inconsistent with typical physical interactions between objects and surfaces.Dog's front paw on the wooden floor near the center of the image.:The dog's paw appears unusually large and disproportionate compared to the rest of its body, which is inconsistent with typical canine anatomy.Dog's face near the center of the image.:The dog's eye appears unusually large and exaggerated, which is not typical of a real dog's anatomy.Dog's paw on the floor in front of the television.:The dog's paw appears unusually large and disproportionate compared to the rest of its body, which is inconsistent with typical canine anatomy.Dog's face in the center of the image.:The dog's mouth appears unusually large and disproportionate compared to typical canine anatomy.Speaker grille on the bottom right of the television.:The speaker grille contains a dog's face, which is unusual and inconsistent with the typical design of a speaker grille on a television.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/18f84f18-d564-4895-a963-1492e867659a.png"
+        }
+    },
+    {
+        "7": {
+            "refs": [
+                {
+                    "sentence": "Front wheel of the car on the left side of the image.",
+                    "segmentation": [
+                        [
+                            170.0,
+                            331.0,
+                            170.0,
+                            385.0,
+                            220.0,
+                            385.0,
+                            220.0,
+                            331.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Front right headlight of the car in the foreground.",
+                    "segmentation": [
+                        [
+                            424.0,
+                            301.0,
+                            424.0,
+                            349.0,
+                            472.0,
+                            349.0,
+                            472.0,
+                            301.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Front right corner of the car's bumper.",
+                    "segmentation": [
+                        [
+                            430.0,
+                            358.0,
+                            430.0,
+                            406.0,
+                            478.0,
+                            406.0,
+                            478.0,
+                            358.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Side mirror of the car on the left side of the image.",
+                    "segmentation": [
+                        [
+                            140.0,
+                            250.0,
+                            140.0,
+                            307.0,
+                            196.0,
+                            307.0,
+                            196.0,
+                            250.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Hood of the car near the center of the image.",
+                    "segmentation": [
+                        [
+                            373.0,
+                            317.0,
+                            373.0,
+                            365.0,
+                            421.0,
+                            365.0,
+                            421.0,
+                            317.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Front left wheel of the car on the left side of the image.",
+                    "segmentation": [
+                        [
+                            82.0,
+                            303.0,
+                            82.0,
+                            347.0,
+                            126.0,
+                            347.0,
+                            126.0,
+                            303.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Side mirror on the right side of the car.",
+                    "segmentation": [
+                        [
+                            341.0,
+                            269.0,
+                            341.0,
+                            317.0,
+                            389.0,
+                            317.0,
+                            389.0,
+                            269.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features a sleek, modern sports car set against an urban skyline. Several anomalies are evident across the vehicle. The wheels appear to have irregular shapes, deviating from the expected circular form, which may affect their functionality. The side mirrors show unusual contours that are inconsistent with typical aerodynamic designs. Additionally, the car's body panels exhibit distortions and irregularities, disrupting the smooth and streamlined appearance that is characteristic of a high-performance sports car. These inconsistencies suggest a departure from the standard design and manufacturing precision expected in such vehicles.\nTo elaborate, I have found the following artifacts. Front wheel of the car on the left side of the image.:The wheel appears to be a speaker, which is not a functional or typical component of a car wheel.Front right headlight of the car in the foreground.:The headlight appears unusually flat and lacks the typical three-dimensional structure and reflective qualities expected in car headlights.Front right corner of the car's bumper.:The car's bumper appears to have an unusual shape with a sharp edge that is not typical for standard car designs, which usually have smoother, rounded edges for safety and aerodynamics.Side mirror of the car on the left side of the image.:The side mirror appears unusually large and distorted, which is inconsistent with typical car mirror proportions.Hood of the car near the center of the image.:The hood of the car has an unusual indentation with red markings that do not align with typical car design or manufacturing standards.Front left wheel of the car on the left side of the image.:The wheel appears to lack depth and detail, making it look flat and unrealistic compared to a typical car wheel.Side mirror on the right side of the car.:The side mirror appears unusually small and lacks the reflective surface typical of car mirrors, making it non-functional for its intended purpose.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/5eee2bed-067e-4d7b-90da-2042ce4ccdc6.png"
+        }
+    },
+    {
+        "8": {
+            "refs": [
+                {
+                    "sentence": "Woman's chin in the center of the image.",
+                    "segmentation": [
+                        [
+                            184.0,
+                            388.0,
+                            184.0,
+                            457.0,
+                            260.0,
+                            457.0,
+                            260.0,
+                            388.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Earring on the left side of the woman's face.",
+                    "segmentation": [
+                        [
+                            121.0,
+                            220.0,
+                            121.0,
+                            268.0,
+                            169.0,
+                            268.0,
+                            169.0,
+                            220.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Right eye of the woman in the center of the image.",
+                    "segmentation": [
+                        [
+                            175.0,
+                            196.0,
+                            175.0,
+                            256.0,
+                            226.0,
+                            256.0,
+                            226.0,
+                            196.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Woman's mouth in the center of the image.",
+                    "segmentation": [
+                        [
+                            208.0,
+                            274.0,
+                            208.0,
+                            322.0,
+                            256.0,
+                            322.0,
+                            256.0,
+                            274.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Right ear of the woman in the center of the image.",
+                    "segmentation": [
+                        [
+                            310.0,
+                            164.0,
+                            310.0,
+                            256.0,
+                            364.0,
+                            256.0,
+                            364.0,
+                            164.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Bottom left corner of the image, showing part of a dark fabric and a blurred background.",
+                    "segmentation": [
+                        [
+                            -11.0,
+                            382.0,
+                            -11.0,
+                            430.0,
+                            37.0,
+                            430.0,
+                            37.0,
+                            382.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Right eye of the woman in the center of the image.",
+                    "segmentation": [
+                        [
+                            262.0,
+                            175.0,
+                            262.0,
+                            223.0,
+                            310.0,
+                            223.0,
+                            310.0,
+                            175.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features a person with several noticeable anomalies affecting various facial features and areas. The eyes appear to have irregular shapes, deviating from the typical symmetry expected in human features. The mouth shows unusual distortions, which disrupt the natural alignment and expression. Additionally, the ear and surrounding areas exhibit inconsistencies in shape and texture, differing from the smooth contours usually observed. These anomalies collectively contribute to an overall appearance that diverges from standard human facial characteristics.\nTo elaborate, I have found the following artifacts. Woman's chin in the center of the image.:The chin appears unusually smooth and lacks natural skin texture, which is inconsistent with typical human skin appearance.Earring on the left side of the woman's face.:The earring appears to be floating without visible support or attachment to the ear, which is inconsistent with how earrings are typically worn.Right eye of the woman in the center of the image.:The eye appears unusually large and overly detailed, which is inconsistent with typical human eye proportions and natural appearance.Woman's mouth in the center of the image.:The teeth appear unnaturally uniform and overly white, lacking realistic texture and variation typical of natural teeth.Right ear of the woman in the center of the image.:The ear appears to have an unusual shadow or discoloration that is inconsistent with natural skin tones, suggesting an anomaly in lighting or image processing.Bottom left corner of the image, showing part of a dark fabric and a blurred background.:The cropped image shows a portion of a dark fabric with an indistinct background, lacking context or identifiable features, making it unclear and inconsistent with typical recognizable objects.Right eye of the woman in the center of the image.:The eyebrow appears unnaturally perfect and symmetrical, which is uncommon in natural human features.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/7bd324cc-b9d1-44f3-a15b-13af8fc7d2e7.png"
+        }
+    },
+    {
+        "9": {
+            "refs": [
+                {
+                    "sentence": "Windows on the left tower of the central skyscraper.",
+                    "segmentation": [
+                        [
+                            322.0,
+                            352.0,
+                            322.0,
+                            400.0,
+                            370.0,
+                            400.0,
+                            370.0,
+                            352.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Building on the bottom-right corner of the image.",
+                    "segmentation": [
+                        [
+                            428.0,
+                            460.0,
+                            428.0,
+                            508.0,
+                            476.0,
+                            508.0,
+                            476.0,
+                            460.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Building on the left side of the skyline with a pointed top.",
+                    "segmentation": [
+                        [
+                            178.0,
+                            271.0,
+                            178.0,
+                            319.0,
+                            226.0,
+                            319.0,
+                            226.0,
+                            271.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Top section of the skyscraper on the right side of the image.",
+                    "segmentation": [
+                        [
+                            310.0,
+                            250.0,
+                            310.0,
+                            298.0,
+                            358.0,
+                            298.0,
+                            358.0,
+                            250.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Upper-left section of the tallest building in the center of the image.",
+                    "segmentation": [
+                        [
+                            136.0,
+                            229.0,
+                            136.0,
+                            277.0,
+                            184.0,
+                            277.0,
+                            184.0,
+                            229.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Windows on the lower right side of the central skyscraper.",
+                    "segmentation": [
+                        [
+                            335.0,
+                            449.0,
+                            335.0,
+                            497.0,
+                            383.0,
+                            497.0,
+                            383.0,
+                            449.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Section of a skyscraper on the left side of the image.",
+                    "segmentation": [
+                        [
+                            136.0,
+                            424.0,
+                            136.0,
+                            472.0,
+                            184.0,
+                            472.0,
+                            184.0,
+                            424.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Top of a building on the right side of the cityscape.",
+                    "segmentation": [
+                        [
+                            448.0,
+                            331.0,
+                            448.0,
+                            379.0,
+                            496.0,
+                            379.0,
+                            496.0,
+                            331.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image showcases a cityscape at night with towering skyscrapers set against a starry sky. Several anomalies are present across the buildings. The windows on the skyscrapers exhibit irregular reflections and distortions, deviating from the expected uniformity and clarity. Some sections of the building facades appear to have unusual textures and shapes, inconsistent with the typical sleek and structured appearance of modern architecture. Additionally, certain areas of the skyline show unexpected visual disruptions, which contrast with the otherwise serene and majestic view of the night sky.\nTo elaborate, I have found the following artifacts. Windows on the left tower of the central skyscraper.:The windows appear to have inconsistent lighting patterns, with some sections unnaturally bright while others are dark, which is unusual for a building at night.Building on the bottom-right corner of the image.:The building appears to be leaning at an unnatural angle, which is inconsistent with typical architectural structures.Building on the left side of the skyline with a pointed top.:The building's structure appears to blend into the night sky, creating an unrealistic transition between the building and the background.Top section of the skyscraper on the right side of the image.:The building's windows appear to have an unusual reflection or lighting effect that is inconsistent with typical urban lighting, creating an unrealistic appearance.Upper-left section of the tallest building in the center of the image.:The building's reflection appears unusually distorted, with an inconsistent alignment that does not match typical architectural reflections.Windows on the lower right side of the central skyscraper.:The windows appear unusually distorted with inconsistent lighting patterns that do not match typical reflections or interior lighting of a building.Section of a skyscraper on the left side of the image.:The building's reflection appears distorted and misaligned with the actual structure, which is inconsistent with typical reflections on glass surfaces.Top of a building on the right side of the cityscape.:The building's top appears to have an unusual structure with lights that seem randomly placed, lacking typical architectural symmetry and design.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/9638049f-aaba-47ba-8566-850b4d391a1d.png"
+        }
+    },
+    {
+        "10": {
+            "refs": [
+                {
+                    "sentence": "Top left corner of the crown worn by the man in the center.",
+                    "segmentation": [
+                        [
+                            131.0,
+                            127.0,
+                            131.0,
+                            175.0,
+                            179.0,
+                            175.0,
+                            179.0,
+                            127.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Gold chain on the chest of the man wearing a fur cloak.",
+                    "segmentation": [
+                        [
+                            250.0,
+                            373.0,
+                            250.0,
+                            421.0,
+                            298.0,
+                            421.0,
+                            298.0,
+                            373.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Crown on the top of the man's head.",
+                    "segmentation": [
+                        [
+                            290.0,
+                            44.0,
+                            290.0,
+                            92.0,
+                            338.0,
+                            92.0,
+                            338.0,
+                            44.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Center of the image, part of the ornate garment worn by the seated man.",
+                    "segmentation": [
+                        [
+                            244.0,
+                            307.0,
+                            244.0,
+                            355.0,
+                            292.0,
+                            355.0,
+                            292.0,
+                            307.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Man's left eye in the center of the image wearing a crown.",
+                    "segmentation": [
+                        [
+                            236.0,
+                            112.0,
+                            236.0,
+                            175.0,
+                            311.0,
+                            175.0,
+                            311.0,
+                            112.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Hand holding a dagger in the lower center of the image.",
+                    "segmentation": [
+                        [
+                            209.0,
+                            430.0,
+                            209.0,
+                            488.0,
+                            275.0,
+                            488.0,
+                            275.0,
+                            430.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Ornate jewelry on the lower right side of the man's robe.",
+                    "segmentation": [
+                        [
+                            331.0,
+                            458.0,
+                            331.0,
+                            506.0,
+                            379.0,
+                            506.0,
+                            379.0,
+                            458.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Crown on the man's head in the upper-left corner of the image.",
+                    "segmentation": [
+                        [
+                            121.0,
+                            56.0,
+                            121.0,
+                            104.0,
+                            169.0,
+                            104.0,
+                            169.0,
+                            56.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features a regal figure adorned in luxurious attire, including a crown and a fur-lined cloak. Several anomalies are noticeable across the portrait. The crown exhibits irregularities, with some elements appearing uneven or asymmetrical. The facial features show slight distortions, particularly around the eyes and forehead, which deviate from natural proportions. The intricate patterns on the clothing display inconsistencies, with some areas lacking the expected symmetry and detail. Additionally, the hand holding a scepter or similar object appears slightly misshapen, contributing to an overall impression of subtle distortions throughout the image.\nTo elaborate, I have found the following artifacts. Top left corner of the crown worn by the man in the center.:The crown's top left corner appears unusually dark and lacks detail, which is inconsistent with the typically ornate and reflective nature of crowns.Gold chain on the chest of the man wearing a fur cloak.:The gold chain appears overly large and exaggerated, lacking realistic proportions and detail typical of actual jewelry.Crown on the top of the man's head.:The crown appears unusually small and lacks realistic detail, making it look more like a decorative piece than a functional crown.Center of the image, part of the ornate garment worn by the seated man.:The intricate design on the garment appears overly complex and lacks realistic texture, suggesting it may not be a genuine fabric pattern.Man's left eye in the center of the image wearing a crown.:The eye appears unusually reflective and lacks natural texture, giving it an artificial appearance.Hand holding a dagger in the lower center of the image.:The hand appears to be holding a dagger with an unusually large and ornate handle, which is not typical for functional daggers. The dagger's design seems more decorative than practical, suggesting it may not be intended for actual use.Ornate jewelry on the lower right side of the man's robe.:The jewelry appears excessively large and intricately detailed, which may not be practical or typical for real-world wear, suggesting it is more decorative than functional.Crown on the man's head in the upper-left corner of the image.:The crown appears unusually large and ornate, with an exaggerated number of decorative elements that are not typical for real crowns, making it look impractical for actual wear.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/4ff5146f-92c8-40a0-b2c7-403e65bbe846.png"
+        }
+    },
+    {
+        "11": {
+            "refs": [
+                {
+                    "sentence": "Right eye of the man in the center of the image.",
+                    "segmentation": [
+                        [
+                            276.0,
+                            123.0,
+                            276.0,
+                            175.0,
+                            338.0,
+                            175.0,
+                            338.0,
+                            123.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Thumb of the man in the center of the image wearing a two-tone suit.",
+                    "segmentation": [
+                        [
+                            250.0,
+                            290.0,
+                            250.0,
+                            349.0,
+                            298.0,
+                            349.0,
+                            298.0,
+                            290.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Man's lips in the center of the image.",
+                    "segmentation": [
+                        [
+                            202.0,
+                            182.0,
+                            202.0,
+                            232.0,
+                            277.0,
+                            232.0,
+                            277.0,
+                            182.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Knot of the tie worn by the man in the center of the image.",
+                    "segmentation": [
+                        [
+                            233.0,
+                            240.0,
+                            233.0,
+                            292.0,
+                            297.0,
+                            292.0,
+                            297.0,
+                            240.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Hand of the man in the center of the image wearing a suit.",
+                    "segmentation": [
+                        [
+                            223.0,
+                            397.0,
+                            223.0,
+                            445.0,
+                            271.0,
+                            445.0,
+                            271.0,
+                            397.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Pocket square on the left side of the man's suit jacket.",
+                    "segmentation": [
+                        [
+                            361.0,
+                            260.0,
+                            361.0,
+                            308.0,
+                            409.0,
+                            308.0,
+                            409.0,
+                            260.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Man's left eye in the center of the image.",
+                    "segmentation": [
+                        [
+                            187.0,
+                            115.0,
+                            187.0,
+                            163.0,
+                            235.0,
+                            163.0,
+                            235.0,
+                            115.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Left shoulder of the man wearing a suit.",
+                    "segmentation": [
+                        [
+                            153.0,
+                            88.0,
+                            153.0,
+                            132.0,
+                            197.0,
+                            132.0,
+                            197.0,
+                            88.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features a well-dressed individual in a suit, with several notable inconsistencies present. The facial area shows irregularities, particularly around the eyes and forehead, where the textures appear unusual and deviate from natural skin tones. The hand, prominently displayed in a thumbs-up gesture, exhibits distortions that affect its overall shape and definition. Additionally, the suit's fabric has areas where the texture and pattern are inconsistent, disrupting the expected smooth and tailored appearance. These anomalies collectively impact the overall coherence and realism of the image.\nTo elaborate, I have found the following artifacts. Right eye of the man in the center of the image.:The eye appears overly sharp and stylized, with exaggerated contrast and shadowing that is not typical of a natural human eye.Thumb of the man in the center of the image wearing a two-tone suit.:The thumb appears unusually large and disproportionate compared to typical human anatomy, suggesting an abnormal enlargement.Man's lips in the center of the image.:The lips appear overly smooth and lack natural texture, giving them an unrealistic appearance.Knot of the tie worn by the man in the center of the image.:The tie knot appears unusually large and lacks the typical symmetrical shape of a standard tie knot, suggesting an inconsistency with how ties are normally worn.Hand of the man in the center of the image wearing a suit.:The hand appears unusually blurred and lacks clear definition, which is inconsistent with typical human hand appearance.Pocket square on the left side of the man's suit jacket.:The pocket square appears to have an unusual texture and pattern that does not resemble typical fabric, making it look unrealistic.Man's left eye in the center of the image.:The eye appears unusually large and overly detailed compared to typical human proportions, creating an exaggerated and unrealistic appearance.Left shoulder of the man wearing a suit.:The shoulder appears unusually dark and lacks detail, which is inconsistent with typical fabric texture and lighting on clothing.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/35419229-be28-43ce-8e8a-4a641c9e1cfc.png"
+        }
+    },
+    {
+        "12": {
+            "refs": [
+                {
+                    "sentence": "Text overlay on the left sleeve of the man's white suit.",
+                    "segmentation": [
+                        [
+                            76.0,
+                            238.0,
+                            76.0,
+                            298.0,
+                            139.0,
+                            298.0,
+                            139.0,
+                            238.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Raised hand of the man in the white suit on the left side of the image.",
+                    "segmentation": [
+                        [
+                            275.0,
+                            4.0,
+                            275.0,
+                            92.0,
+                            338.0,
+                            92.0,
+                            338.0,
+                            4.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Text on the right side of the man's suit.",
+                    "segmentation": [
+                        [
+                            269.0,
+                            220.0,
+                            269.0,
+                            277.0,
+                            328.0,
+                            277.0,
+                            328.0,
+                            220.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Collar of the man's white jacket on the left side of the image.",
+                    "segmentation": [
+                        [
+                            193.0,
+                            184.0,
+                            193.0,
+                            232.0,
+                            241.0,
+                            232.0,
+                            241.0,
+                            184.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Man's left hand at the bottom left of the image.",
+                    "segmentation": [
+                        [
+                            106.0,
+                            433.0,
+                            106.0,
+                            481.0,
+                            154.0,
+                            481.0,
+                            154.0,
+                            433.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Man's face in the center of the image wearing a white suit.",
+                    "segmentation": [
+                        [
+                            163.0,
+                            107.0,
+                            163.0,
+                            160.0,
+                            224.0,
+                            160.0,
+                            224.0,
+                            107.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Upper right arm of the man in a white suit.",
+                    "segmentation": [
+                        [
+                            265.0,
+                            151.0,
+                            265.0,
+                            199.0,
+                            313.0,
+                            199.0,
+                            313.0,
+                            151.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Text at the bottom center of the image.",
+                    "segmentation": [
+                        [
+                            332.0,
+                            469.0,
+                            332.0,
+                            517.0,
+                            380.0,
+                            517.0,
+                            380.0,
+                            469.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Text at the bottom center of the image.",
+                    "segmentation": [
+                        [
+                            147.0,
+                            469.0,
+                            147.0,
+                            521.0,
+                            268.0,
+                            521.0,
+                            268.0,
+                            469.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Text at the bottom center of the image.",
+                    "segmentation": [
+                        [
+                            280.0,
+                            469.0,
+                            280.0,
+                            511.0,
+                            322.0,
+                            511.0,
+                            322.0,
+                            469.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image features a person dressed in a white suit against a textured green background. Several anomalies are noticeable throughout the image. The suit's fabric appears to have irregular textures, deviating from the smooth and consistent appearance typically expected in such attire. The hand raised in the air shows unusual distortions, affecting the natural shape and proportions. Additionally, the facial features exhibit inconsistencies, with certain areas appearing altered or misaligned. These anomalies contribute to an overall impression of distortion, impacting the natural and expected presentation of the subject.\nTo elaborate, I have found the following artifacts. Text overlay on the left sleeve of the man's white suit.:The text overlay is not a natural part of the suit and appears as an artificial watermark, which is inconsistent with typical clothing design.Raised hand of the man in the white suit on the left side of the image.:The hand appears unusually large and disproportionate compared to the man's body, which is inconsistent with typical human anatomy.Text on the right side of the man's suit.:The text appears to be embedded in the suit fabric, which is unusual as text is typically printed or embroidered on clothing, not integrated into the fabric itself.Collar of the man's white jacket on the left side of the image.:The collar appears to have an unusual texture and color blending, which is inconsistent with typical fabric appearance.Man's left hand at the bottom left of the image.:The hand appears unusually large and disproportionate compared to the rest of the body, which is inconsistent with typical human anatomy.Man's face in the center of the image wearing a white suit.:The man's eyes appear unusually large and wide open, which is inconsistent with typical human facial expressions.Upper right arm of the man in a white suit.:The arm appears unusually elongated and curved, which is not consistent with typical human anatomy.Text at the bottom center of the image.:The text appears distorted and unclear, making it difficult to read or understand, which is unusual for standard text presentation.Text at the bottom center of the image.:The text is distorted and unreadable, with letters overlapping and unclear, making it inconsistent with standard typography.Text at the bottom center of the image.:The text appears distorted and difficult to read, with overlapping and inconsistent character shapes, which is unusual for standard typography.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/4ce02158-abde-4e7b-a477-ec65ead2590e.png"
+        }
+    },
+    {
+        "13": {
+            "refs": [
+                {
+                    "sentence": "Tree on the left side of the mountainous landscape.",
+                    "segmentation": [
+                        [
+                            76.0,
+                            163.0,
+                            76.0,
+                            211.0,
+                            124.0,
+                            211.0,
+                            124.0,
+                            163.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Traffic light on the right side of the road near the trees.",
+                    "segmentation": [
+                        [
+                            352.0,
+                            193.0,
+                            352.0,
+                            241.0,
+                            400.0,
+                            241.0,
+                            400.0,
+                            193.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Trees and rocks on the left side of the road.",
+                    "segmentation": [
+                        [
+                            173.0,
+                            173.0,
+                            173.0,
+                            221.0,
+                            221.0,
+                            221.0,
+                            221.0,
+                            173.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Road marking on the right side of the highway.",
+                    "segmentation": [
+                        [
+                            430.0,
+                            320.0,
+                            430.0,
+                            368.0,
+                            478.0,
+                            368.0,
+                            478.0,
+                            320.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Crack on the right side of the road near the center of the image.",
+                    "segmentation": [
+                        [
+                            358.0,
+                            274.0,
+                            358.0,
+                            322.0,
+                            406.0,
+                            322.0,
+                            406.0,
+                            274.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Object on the road near the center of the image.",
+                    "segmentation": [
+                        [
+                            220.0,
+                            220.0,
+                            220.0,
+                            268.0,
+                            268.0,
+                            268.0,
+                            268.0,
+                            220.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Trees and rocks on the right side of the road near the mountains.",
+                    "segmentation": [
+                        [
+                            433.0,
+                            169.0,
+                            433.0,
+                            217.0,
+                            481.0,
+                            217.0,
+                            481.0,
+                            169.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Road in the center of the image with two cars on either side.",
+                    "segmentation": [
+                        [
+                            241.0,
+                            158.0,
+                            241.0,
+                            267.0,
+                            319.0,
+                            267.0,
+                            319.0,
+                            158.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image depicts a scenic mountain road with several anomalies present. The road surface shows irregularities, with sections appearing uneven and inconsistent with the typical smooth texture expected of a well-maintained highway. The surrounding landscape, including the trees and rocky formations, exhibits distortions that disrupt the natural continuity and symmetry of the scene. These anomalies create an overall impression of visual inconsistency, detracting from the expected realism of the environment.\nTo elaborate, I have found the following artifacts. Tree on the left side of the mountainous landscape.:The tree appears unusually large compared to the surrounding landscape, suggesting an unrealistic scale.Traffic light on the right side of the road near the trees.:The traffic light is positioned unusually high above the trees, which is not typical for standard traffic light installations.Trees and rocks on the left side of the road.:The trees and rocks appear to be unnaturally blended together, lacking distinct separation and realistic texture, which is inconsistent with typical natural landscapes.Road marking on the right side of the highway.:The road marking appears to be unnaturally elevated above the road surface, which is inconsistent with typical flat road markings.Crack on the right side of the road near the center of the image.:The crack appears unusually smooth and uniform, lacking the typical jagged and irregular edges found in real road damage.Object on the road near the center of the image.:The object appears to be a distorted car tire, which is unusually shaped and positioned in a way that defies typical physics, as it seems to be rolling uphill without any visible force acting on it.Trees and rocks on the right side of the road near the mountains.:The trees appear to be unnaturally aligned and symmetrical, which is inconsistent with natural forest growth patterns.Road in the center of the image with two cars on either side.:The road appears to be unnaturally elevated and distorted, creating an unrealistic perspective that defies typical road structure.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/b02304dc-26c4-4df0-a49f-eb5f87204828.png"
+        }
+    },
+    {
+        "14": {
+            "refs": [
+                {
+                    "sentence": "Hands of the girl second from the left holding each other.",
+                    "segmentation": [
+                        [
+                            59.0,
+                            193.0,
+                            59.0,
+                            241.0,
+                            107.0,
+                            241.0,
+                            107.0,
+                            193.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Hands of the girl second from the left in the front row.",
+                    "segmentation": [
+                        [
+                            121.0,
+                            229.0,
+                            121.0,
+                            278.0,
+                            190.0,
+                            278.0,
+                            190.0,
+                            229.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Hands of the girl second from the right, clasped in front of her.",
+                    "segmentation": [
+                        [
+                            418.0,
+                            199.0,
+                            418.0,
+                            247.0,
+                            466.0,
+                            247.0,
+                            466.0,
+                            199.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Face of the girl on the left in a black skirt and white top.",
+                    "segmentation": [
+                        [
+                            50.0,
+                            97.0,
+                            50.0,
+                            145.0,
+                            98.0,
+                            145.0,
+                            98.0,
+                            97.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Hands of the girl second from the right in a white shirt.",
+                    "segmentation": [
+                        [
+                            320.0,
+                            184.0,
+                            320.0,
+                            232.0,
+                            368.0,
+                            232.0,
+                            368.0,
+                            184.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Hands of the girl in the center of the group.",
+                    "segmentation": [
+                        [
+                            208.0,
+                            184.0,
+                            208.0,
+                            232.0,
+                            256.0,
+                            232.0,
+                            256.0,
+                            184.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Feet of the girl on the far left in white tights.",
+                    "segmentation": [
+                        [
+                            61.0,
+                            418.0,
+                            61.0,
+                            472.0,
+                            118.0,
+                            472.0,
+                            118.0,
+                            418.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Face of the second person from the left in the group of five children.",
+                    "segmentation": [
+                        [
+                            193.0,
+                            61.0,
+                            193.0,
+                            113.0,
+                            245.0,
+                            113.0,
+                            245.0,
+                            61.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Face of the woman second from the right in the group.",
+                    "segmentation": [
+                        [
+                            295.0,
+                            67.0,
+                            295.0,
+                            133.0,
+                            361.0,
+                            133.0,
+                            361.0,
+                            67.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Girl on the far right in a white shirt and black skirt.",
+                    "segmentation": [
+                        [
+                            419.0,
+                            80.0,
+                            419.0,
+                            128.0,
+                            467.0,
+                            128.0,
+                            467.0,
+                            80.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Face of the woman second from the left.",
+                    "segmentation": [
+                        [
+                            103.0,
+                            125.0,
+                            103.0,
+                            179.0,
+                            179.0,
+                            179.0,
+                            179.0,
+                            125.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image depicts a group of young dancers in uniform attire, standing in a line. Several anomalies are noticeable across the subjects. The facial features of some individuals appear slightly distorted, deviating from the expected symmetry and proportions. The hands of the dancers show irregularities, with some fingers appearing unusually shaped or positioned. Additionally, the lower legs and feet of one dancer seem to have inconsistencies, lacking the typical alignment and form expected in a poised stance. These anomalies disrupt the overall harmony and balance typically associated with a group of dancers.\nTo elaborate, I have found the following artifacts. Hands of the girl second from the left holding each other.:The hands appear unusually twisted and do not align with typical human hand posture.Hands of the girl second from the left in the front row.:The hands appear unusually smooth and lack natural skin texture, which is inconsistent with typical human hands.Hands of the girl second from the right, clasped in front of her.:The hands appear unusually smooth and lack the typical texture and detail of human skin, which may suggest an artificial appearance.Face of the girl on the left in a black skirt and white top.:The facial features appear slightly blurred and lack distinct definition, which is unusual for a typical human face.Hands of the girl second from the right in a white shirt.:The hands appear unusually large and disproportionate compared to the rest of the body, which is inconsistent with typical human anatomy.Hands of the girl in the center of the group.:The hands appear unusually small and disproportionate compared to the rest of the body, which is not typical for human anatomy.Feet of the girl on the far left in white tights.:The feet appear to be unnaturally blended together, lacking clear separation between them, which is inconsistent with typical human anatomy.Face of the second person from the left in the group of five children.:The facial features appear slightly asymmetrical, which is unusual for a natural human face.Face of the woman second from the right in the group.:The facial features appear slightly blurred and lack the sharpness typically expected in a photograph, which may indicate an inconsistency with real-world appearance.Girl on the far right in a white shirt and black skirt.:The girl's facial features appear slightly distorted and asymmetrical, which is unusual for typical human anatomy.Face of the woman second from the left.:The face appears to have an unnatural smoothness and lack of detail, which is inconsistent with typical human facial features.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/3a738dec-2de7-49a6-9412-1fd729833b71.png"
+        }
+    },
+    {
+        "15": {
+            "refs": [
+                {
+                    "sentence": "Decorative architectural detail on the left side near the top of the column.",
+                    "segmentation": [
+                        [
+                            91.0,
+                            91.0,
+                            91.0,
+                            139.0,
+                            139.0,
+                            139.0,
+                            139.0,
+                            91.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Open book on a chair on the left side of the library aisle.",
+                    "segmentation": [
+                        [
+                            112.0,
+                            382.0,
+                            112.0,
+                            430.0,
+                            160.0,
+                            430.0,
+                            160.0,
+                            382.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Bookshelf on the right side of the library near the columns.",
+                    "segmentation": [
+                        [
+                            424.0,
+                            184.0,
+                            424.0,
+                            232.0,
+                            472.0,
+                            232.0,
+                            472.0,
+                            184.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Books on the left side of the library shelves.",
+                    "segmentation": [
+                        [
+                            8.0,
+                            223.0,
+                            8.0,
+                            271.0,
+                            56.0,
+                            271.0,
+                            56.0,
+                            223.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Decorative capital on the right side of the library archway.",
+                    "segmentation": [
+                        [
+                            371.0,
+                            106.0,
+                            371.0,
+                            154.0,
+                            419.0,
+                            154.0,
+                            419.0,
+                            106.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Row of desks with glass covers on the left side of the hallway.",
+                    "segmentation": [
+                        [
+                            157.0,
+                            295.0,
+                            157.0,
+                            385.0,
+                            247.0,
+                            385.0,
+                            247.0,
+                            295.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Display case on the right side of the library aisle.",
+                    "segmentation": [
+                        [
+                            412.0,
+                            271.0,
+                            412.0,
+                            319.0,
+                            460.0,
+                            319.0,
+                            460.0,
+                            271.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Bookshelf on the right side of the library near the middle.",
+                    "segmentation": [
+                        [
+                            266.0,
+                            325.0,
+                            266.0,
+                            373.0,
+                            314.0,
+                            373.0,
+                            314.0,
+                            325.0
+                        ]
+                    ],
+                    "bbox": null
+                },
+                {
+                    "sentence": "Bookshelf on the left side of the library.",
+                    "segmentation": [
+                        [
+                            42.0,
+                            147.0,
+                            42.0,
+                            191.0,
+                            86.0,
+                            191.0,
+                            86.0,
+                            147.0
+                        ]
+                    ],
+                    "bbox": null
+                }
+            ],
+            "caption": "Upon examining the image. I have found: The image depicts an ornate library interior with several anomalies present. The architectural elements, such as the columns and arches, exhibit irregularities that disrupt the symmetry typically expected in such a setting. The ceiling panels show unusual textures and shapes, deviating from the smooth, consistent patterns usually found in classical designs. Additionally, the display cases along the corridor have distortions that affect their geometric integrity, leading to an inconsistent appearance. These anomalies collectively impact the overall harmony and elegance of the library's design.\nTo elaborate, I have found the following artifacts. Decorative architectural detail on the left side near the top of the column.:The architectural detail appears unusually intricate and dense, which may not be structurally feasible or typical for such a design, suggesting an exaggerated or fictional embellishment.Open book on a chair on the left side of the library aisle.:The book appears to be floating above the chair without any visible support, which is inconsistent with how objects interact with gravity in reality.Bookshelf on the right side of the library near the columns.:The books on the shelf are misaligned and appear to be floating, which is inconsistent with how books typically rest on a shelf.Books on the left side of the library shelves.:The books appear to be floating without any visible support, which is inconsistent with how books are typically stored on shelves.Decorative capital on the right side of the library archway.:The decorative capital appears unusually large and disproportionate compared to typical architectural elements, which may affect the structural balance and aesthetic harmony of the archway.Row of desks with glass covers on the left side of the hallway.:The glass covers on the desks appear unusually distorted, bending light in a way that is inconsistent with typical glass refraction.Display case on the right side of the library aisle.:The top of the display case appears to be floating without visible support, which is inconsistent with typical structural design.Bookshelf on the right side of the library near the middle.:The bookshelf appears to have an unusual curvature, which is inconsistent with the typical straight lines and angles of standard bookshelves.Bookshelf on the left side of the library.:The books are unevenly stacked and appear to be floating, which is inconsistent with how books typically rest on shelves.",
+            "img_file_name": "/mnt/hwfile/opendatalab/bigdata_rs/datasets/richhf-18k/train/raw_imgs/5cca7cbb-5496-43c2-a0e7-6dd7ddf7e955.png"
+        }
+    }
+]

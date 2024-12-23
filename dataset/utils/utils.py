@@ -75,13 +75,21 @@ REGION_GROUP_QUESTIONS = [
     'Can you provide a detailed explanation of the specific locations marked by <region> in this photo?'
 ]
 
+# GCG_QUESTIONS = [
+#     'Could you please give me a detailed description of the image? Please respond with interleaved segmentation masks for the corresponding parts of the answer.',
+#     'Can you provide a thorough description of the this image? Please output with interleaved segmentation masks for the corresponding phrases.',
+#     'Please describe in detail the contents of the image. Please respond with interleaved segmentation masks for the corresponding parts of the answer.',
+#     'Could you give a comprehensive explanation of what can be found within this picture? Please output with interleaved segmentation masks for the corresponding phrases.',
+#     'Could you give me an elaborate explanation of this picture? Please respond with interleaved segmentation masks for the corresponding phrases.',
+#     'Could you provide me with a detailed analysis of this photo? Please output with interleaved segmentation masks for the corresponding parts of the answer.',
+# ]
 GCG_QUESTIONS = [
-    'Could you please give me a detailed description of the image? Please respond with interleaved segmentation masks for the corresponding parts of the answer.',
-    'Can you provide a thorough description of the this image? Please output with interleaved segmentation masks for the corresponding phrases.',
-    'Please describe in detail the contents of the image. Please respond with interleaved segmentation masks for the corresponding parts of the answer.',
-    'Could you give a comprehensive explanation of what can be found within this picture? Please output with interleaved segmentation masks for the corresponding phrases.',
-    'Could you give me an elaborate explanation of this picture? Please respond with interleaved segmentation masks for the corresponding phrases.',
-    'Could you provide me with a detailed analysis of this photo? Please output with interleaved segmentation masks for the corresponding parts of the answer.',
+    'Could you please identify and describe any artifacts present in the image? Please respond with interleaved segmentation masks for the corresponding parts of the answer.',
+    'Can you provide a thorough analysis of artifacts within this image? Please output with interleaved segmentation masks for the corresponding phrases.',
+    'Please detail any artifacts found in the contents of the image. Please respond with interleaved segmentation masks for the corresponding parts of the answer.',
+    'Could you give a comprehensive explanation of any artifacts present in this picture? Please output with interleaved segmentation masks for the corresponding phrases.',
+    'Could you provide an elaborate explanation of the artifacts in this picture? Please respond with interleaved segmentation masks for the corresponding phrases.',
+    'Could you provide a detailed analysis of artifacts in this photo? Please output with interleaved segmentation masks for the corresponding parts of the answer.'
 ]
 
 SEG_QUESTIONS = [

@@ -5,7 +5,9 @@ import torch.nn.functional as F
 
 from model.SAM import build_sam_vit_h
 from model.llava.model.language_model.llava_llama import LlavaLlamaForCausalLM, LlavaLlamaModel
-
+from typing import Optional, List, Tuple, Union
+from transformers.modeling_outputs import ModelOutput
+from dataclasses import dataclass
 
 def calculate_dice_loss(predictions: torch.Tensor, ground_truth: torch.Tensor, mask_count: float, scale_factor=1000,
                         epsilon=1e-6):
@@ -309,3 +311,132 @@ class GLaMMForCausalLM(LlavaLlamaForCausalLM):
                 predicted_embeddings, image_embeddings, resize_list, orig_sizes, infer=True
             )
         return generated_output_ids, pred_masks
+    
+# @dataclass
+# class LegionPredictionHeadOutput(ModelOutput):
+#     loss: Optional[torch.FloatTensor] = None
+#     logits: Optional[torch.FloatTensor] = None
+    
+
+# @dataclass
+# class LegionCausalLMOutputWithHeads(ModelOutput):
+#     # lm head output
+#     loss: Optional[torch.FloatTensor] = None
+#     logits: torch.FloatTensor = None
+#     past_key_values: Optional[List[torch.FloatTensor]] = None
+#     hidden_states: Optional[Tuple[torch.FloatTensor]] = None
+#     attentions: Optional[Tuple[torch.FloatTensor]] = None
+#     image_hidden_states: Optional[torch.FloatTensor] = None
+#     # predicition head outputs
+#     prediction_head_outputs: Optional[LegionPredictionHeadOutput] = None
+    
+
+
+# class LegionForCausalLMWithHeads(GLaMMForCausalLM):
+#     def __init__(self, config, num_labels: int = 2, **kwargs):
+#         super().__init__(config, **kwargs)
+        
+#         self.num_labels = getattr(config, 'num_labels', num_labels)
+#         self.prediction_head = nn.Linear(config.hidden_size, self.num_labels)
+        
+
+#         self.init_weights()
+    
+#     def forward(
+#         self,
+#         global_enc_images: torch.FloatTensor = None,
+#         grounding_enc_images: torch.FloatTensor = None,
+#         bboxes: torch.FloatTensor = None,
+#         input_ids: torch.LongTensor = None,
+#         labels: torch.LongTensor = None,
+#         attention_masks: torch.LongTensor = None,
+#         offset: torch.LongTensor = None,
+#         masks_list: List[torch.FloatTensor] = None,
+#         label_list: List[torch.Tensor] = None,
+#         resize_list: List[tuple] = None,
+#         inference: bool = False,
+#         predict_head_labels: Optional[bool] = False,
+#         prediction_head_labels: Optional[torch.LongTensor] = None,
+#         **kwargs,
+#     ) -> Union[Tuple, LegionCausalLMOutputWithHeads]:
+        
+
+#         outputs = super().forward(
+#             global_enc_images=global_enc_images,
+#             grounding_enc_images=grounding_enc_images,
+#             bboxes=bboxes,
+#             input_ids=input_ids,
+#             labels=labels,
+#             attention_masks=attention_masks,
+#             offset=offset,
+#             masks_list=masks_list,
+#             label_list=label_list,
+#             resize_list=resize_list,
+#             inference=inference,
+#             **kwargs
+#         )
+        
+#         # 提取生成任务的损失
+#         lm_head_loss = outputs.get('loss', None)
+#         final_loss = lm_head_loss
+        
+#         prediction_head_outputs = None
+#         if predict_head_labels:
+#             if input_ids is None:
+#                 raise ValueError("`input_ids` must be provided when `predict_head_labels` is True.")
+#             if self.config.image_token_index is None:
+#                 raise ValueError("`image_token_index` must be set in the config.")
+            
+#             # 提取最后一层的隐藏状态，并定位图像特征
+#             hidden_states = outputs.get('hidden_states', None)
+#             if hidden_states is None:
+#                 raise ValueError("Hidden states are not returned by the model. Ensure `output_hidden_states=True`.")
+            
+#             last_layer_hidden_states = hidden_states[-1][:, :input_ids.size(-1), :]  # Shape: (batch_size, seq_len, hidden_size)
+            
+#             # 创建图像特征掩码
+#             image_features_mask = input_ids == self.config.image_token_index  # Shape: (batch_size, seq_len)
+#             shifted_image_features_mask = torch.cat([
+#                 image_features_mask[:, 1:], 
+#                 torch.zeros(image_features_mask.size(0), 1, dtype=torch.bool, device=image_features_mask.device)
+#             ], dim=1)  # Shift right by 1, pad last with False
+#             last_feature_mask = image_features_mask & ~shifted_image_features_mask  # Shape: (batch_size, seq_len)
+            
+#             # 提取图像特征的隐藏状态
+#             multimodal_image_features = last_layer_hidden_states[last_feature_mask]  # Shape: (num_images, hidden_size)
+            
+#             # 通过分类头计算 logits
+#             prediction_head_logits = self.prediction_head(multimodal_image_features)  # Shape: (num_images, num_labels)
+            
+#             prediction_head_loss = None
+#             if prediction_head_labels is not None:
+#                 if prediction_head_labels.size(0) != prediction_head_logits.size(0):
+#                     raise ValueError("Number of `prediction_head_labels` must match number of image features.")
+                
+#                 # 计算分类损失
+#                 loss_fct = nn.CrossEntropyLoss()
+#                 prediction_head_loss = loss_fct(
+#                     prediction_head_logits.view(-1, self.num_labels),
+#                     prediction_head_labels.view(-1).to(prediction_head_logits.device)
+#                 )
+                
+#                 # 将分类损失加入总损失
+#                 final_loss = final_loss + prediction_head_loss if final_loss is not None else prediction_head_loss
+            
+#             # 封装分类头的输出
+#             prediction_head_outputs = LegionPredictionHeadOutput(
+#                 loss=prediction_head_loss,
+#                 logits=prediction_head_logits
+#             )
+        
+#         # 根据 `return_dict` 和 `predict_head_labels` 的值，决定返回类型
+#         return LegionCausalLMOutputWithHeads(
+#             loss=final_loss,
+#             logits=outputs.get('output', None),
+#             past_key_values=outputs.get('past_key_values', None),
+#             hidden_states=outputs.get('hidden_states', None),
+#             attentions=outputs.get('attentions', None),
+#             image_hidden_states=outputs.get('image_hidden_states', None),
+#             prediction_head_outputs=prediction_head_outputs
+#         )
+

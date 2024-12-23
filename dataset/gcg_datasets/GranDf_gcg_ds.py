@@ -13,7 +13,7 @@ from model.llava import conversation as conversation_lib
 from model.SAM.utils.transforms import ResizeLongestSide
 from tools.utils import DEFAULT_IMAGE_TOKEN
 from dataset.utils.utils import GCG_QUESTIONS
-
+import pdb
 
 class GCGBaseDataset(torch.utils.data.Dataset):
     """
@@ -137,6 +137,11 @@ class GCGBaseDataset(torch.utils.data.Dataset):
         tokens_positive = sort_by_start_index(tokens_positive, phrase_order)
 
         image = cv2.imread(image_path)
+
+        ###TODO：这个地方是由于rich18k的问题导致我强制给他resize到了512*512，后续需要删除
+        image = cv2.resize(image, (512, 512))
+        ###
+
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         # Prepare input for Global Image Encoder
         global_enc_image = self.global_enc_processor.preprocess(image, return_tensors="pt")["pixel_values"][0]
@@ -278,7 +283,7 @@ class Flickr30kGCGDataset(GCGBaseDataset):
 
 class RefCOCOgGCGDataset(GCGBaseDataset):
     def __init__(self, dataset_dir, tokenizer, global_image_encoder, epoch_samples=8000, precision="fp32",
-                 image_size=224, num_classes_per_sample=3, validation=False, random_sampling=True):
+                 image_size=512, num_classes_per_sample=3, validation=False, random_sampling=True):
         json_files = {'validation': "RefCOCOg_GCG_val.json", 'training': "RefCOCOg_GCG_train.json"}
         json_path = json_files['validation'] if validation else json_files['training']
         image_dir = os.path.join("coco_2014", "train2014")
@@ -288,7 +293,6 @@ class RefCOCOgGCGDataset(GCGBaseDataset):
             dataset_dir, tokenizer, global_image_encoder, epoch_samples, precision, image_size, num_classes_per_sample,
             validation, random_sampling, image_dir, json_path, )
         print('\033[92m' + "----GCG-{}: RefCOCOg-GCG dataset initialized----".format(mode) + '\033[0m')
-
     def _parse_annotations(self, ann_info):
         image_path = os.path.join(self.image_folder, ann_info['img_file_name'])
         annotations = {'labels': [], 'caption': [], 'masks': [], 'tokens_positive': [],
@@ -331,6 +335,86 @@ class RefCOCOgGCGDataset(GCGBaseDataset):
                     # Modify the phrases to reflect the change in indices
                     annotations['labels'][i] = orig_caption[tokens_positive[i][0]:tokens_positive[i][1] + 1]
                     break  # Exit inner loop since i was modified
+
+        return annotations
+
+    def __getitem__(self, index):
+        while True:
+            ann_dict = self.data_infos[index] if (self.validation or not self.random_sampling) \
+                else self.data_infos[random.randint(0, len(self.data_infos) - 1)]
+            ann_info = next(iter(ann_dict.values()))
+            # Parse annotation info
+            ann = self._parse_annotations(ann_info)
+            image_path = os.path.join(self.image_folder, ann['file_name'])
+            # Check if len(gt_phrases) > 0 and if True, break the loop
+            if len(ann['labels']) > 0:
+                break
+            else:
+                index = random.randint(0, len(self.data_infos) - 1)
+        data_item = {"image_path": image_path, "filename": ann['file_name'], "caption": ann['caption'],
+                     "labels": ann['labels'], "masks": ann['masks'], "tokens_positive": ann['tokens_positive']}
+
+        return self.process_data(data_item)
+
+
+
+
+class Richhf18kGCGDataset(GCGBaseDataset):
+    def __init__(self, dataset_dir, tokenizer, global_image_encoder, epoch_samples=8000, precision="fp32",
+                 image_size=512, num_classes_per_sample=3, validation=False, random_sampling=True):
+        json_files = {'validation': "rich18k_GCG_val.json", 'training': "rich18k_GCG_train.json"}
+        json_path = json_files['validation'] if validation else json_files['training']
+        image_dir = ''
+        mode = "Val" if validation else "Train"
+        epoch_samples = 10927 if validation else 788
+        super().__init__(
+            dataset_dir, tokenizer, global_image_encoder, epoch_samples, precision, image_size, num_classes_per_sample,
+            validation, random_sampling, image_dir, json_path, )
+        print('\033[92m' + "----GCG-{}: Rich18k dataset initialized----".format(mode) + '\033[0m')
+
+    def _parse_annotations(self, ann_info):
+        image_path = os.path.join(self.image_folder, ann_info['img_file_name'])
+        annotations = {'labels': [], 'caption': [], 'masks': [], 'tokens_positive': [],
+                       'file_name': ann_info['img_file_name']}
+        # width, height = Image.open(image_path).size
+        width = 512
+        height = 512
+        orig_caption = ann_info['caption'].strip('"').strip()
+        annotations['caption'] = orig_caption
+        for detail in ann_info['refs']:
+            phrase = detail['sentence']
+            if phrase in annotations['caption']:
+                annotations['labels'].append(phrase)
+                index = annotations['caption'].find(phrase)
+                end_index = index + len(phrase) if index != -1 else -1
+                annotations['tokens_positive'].append([index, end_index])
+
+                # Convert segmentation to binary mask
+                binary_mask = np.zeros((height, width), dtype=np.uint8)
+                for seg in detail["segmentation"]:
+                    seg = np.array(seg)
+                    rles = mask.frPyObjects([seg], height, width)
+                    m = mask.decode(rles)
+                    m = m.astype(np.uint8)
+                    binary_mask += m.squeeze()
+                annotations['masks'].append(binary_mask)
+        # Sort tokens_positive and corresponding lists
+        tokens_positive = annotations['tokens_positive']
+        sorted_indices = sorted(range(len(tokens_positive)), key=lambda i: tokens_positive[i][0])
+        annotations['tokens_positive'] = [tokens_positive[i] for i in sorted_indices]
+        annotations['masks'] = [annotations['masks'][i] for i in sorted_indices]
+        annotations['labels'] = [annotations['labels'][i] for i in sorted_indices]
+
+        # # Trimming overlapping intervals
+        # for i in range(len(tokens_positive)):
+        #     for j in range(i + 1, len(tokens_positive)):
+        #         # If there is overlap
+        #         if tokens_positive[i][1] >= tokens_positive[j][0]:
+        #             # Modify the end index of phrase i to be one less than the start index of phrase j
+        #             tokens_positive[i][1] = tokens_positive[j][0] - 1
+        #             # Modify the phrases to reflect the change in indices
+        #             annotations['labels'][i] = orig_caption[tokens_positive[i][0]:tokens_positive[i][1] + 1]
+        #             break  # Exit inner loop since i was modified
 
         return annotations
 

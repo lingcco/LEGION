@@ -532,13 +532,13 @@ def train(active_datasets, model, epoch, scheduler, writer, dataset_iters, args,
                 progress.display(global_step + 1)
                 for key, tracker in trackers.items():
                     writer.add_scalar(f"train/{key}", tracker.avg, global_step)
-                    wandb.log({f"train/{key}": tracker.avg}, step=global_step)
+                    wandb.log({f"train/{key}": tracker.avg}, step=global_step + args.steps_per_epoch * epoch)
                 writer.add_scalar("metrics/total_secs_per_batch", batch_time.avg, global_step)
                 writer.add_scalar("metrics/data_secs_per_batch", data_time.avg, global_step)
                 wandb.log({
                     "metrics/total_secs_per_batch": batch_time.avg,
                     "metrics/data_secs_per_batch": data_time.avg
-                }, step=global_step) 
+                }, step=global_step + args.steps_per_epoch * epoch) 
 
             for tracker in trackers.values():
                 tracker.reset()

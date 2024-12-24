@@ -58,7 +58,7 @@ def inference(instructions, image_path):
     # Read and preprocess the image (Global image encoder - CLIP)
     image_np = cv2.imread(image_path)
     ###TODO:这个地方后续需要去掉
-    image_np = cv2.resize(image_np, (512, 512))
+    # image_np = cv2.resize(image_np, (512, 512))
     ###
     image_np = cv2.cvtColor(image_np, cv2.COLOR_BGR2RGB)
     original_size_list = [image_np.shape[:2]]

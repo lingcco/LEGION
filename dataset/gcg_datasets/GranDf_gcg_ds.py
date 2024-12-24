@@ -138,10 +138,6 @@ class GCGBaseDataset(torch.utils.data.Dataset):
 
         image = cv2.imread(image_path)
 
-        ###TODO：这个地方是由于rich18k的问题导致我强制给他resize到了512*512，后续需要删除
-        image = cv2.resize(image, (512, 512))
-        ###
-
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         # Prepare input for Global Image Encoder
         global_enc_image = self.global_enc_processor.preprocess(image, return_tensors="pt")["pixel_values"][0]
